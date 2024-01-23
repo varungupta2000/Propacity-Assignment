@@ -1,0 +1,283 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 12px;
+
+
+    @media (min-width:1280px) {
+        flex-direction: row;
+        max-width: 1280px;
+        padding: 24px 12px;
+        margin: 0 auto
+    }
+
+    .filter {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .sortHeading {
+            font-weight: bolder;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+
+        .sortingButtons {
+            display: flex;
+            gap: 14px;
+            flex-direction: column;
+            text-wrap: nowrap;
+
+            .button {
+                border: none;
+                padding: 12px;
+                border-radius: 10px;
+                cursor: pointer;
+                background-color: #000000;
+                font-size: 16px;
+                font-weight: bold;
+                color: #fff
+            }
+
+            .button:hover {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        .airlineFilter {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .checkboxLabel {
+                margin-left: 8px;
+            }
+        }
+
+    }
+
+    .loader {
+        margin: auto;
+    }
+
+    .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        max-width: 1024px;
+        margin: 0 auto;
+
+        .dataContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            .box {
+                border: 1px solid black;
+                display: flex;
+                list-style: none;
+                border-radius: 10px;
+                flex-wrap: wrap;
+                gap: 12px;
+                flex-direction: column;
+
+                @media (min-width:1280px) {
+                    gap: 20px;
+                    flex-direction: row;
+
+                }
+            }
+
+            .box:hover {
+                box-shadow: 0px 0px 30px black;
+            }
+
+            .airlineDetails {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-weight: bolder;
+                font-size: 20px;
+                margin-left: 20px;
+
+                .flightImage {
+                    align-self: center;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .airlineCodeAndNumber {
+                display: flex;
+                font-size: 12px;
+                justify-content: center;
+                gap: 40px;
+                color: #9a9a9a;
+
+                @media (min-width:1280px) {
+                    gap: 12px;
+                    justify-content: space-between;
+
+
+                }
+            }
+
+            .ArrivalDeparture {
+                align-self: center;
+                display: flex;
+                justify-self: center;
+                gap: 12px;
+                padding: 8px;
+                justify-content: space-between;
+                border-top: 1px solid black;
+                border-bottom: 1px solid black;
+                width: 100%;
+
+                @media (min-width:1280px) {
+                    padding: 20px;
+                    gap: 40px;
+                    border-right: 1px solid black;
+                    border-left: 1px solid black;
+                    border-top: 0px;
+                    border-bottom: 0px;
+                    width: max-content;
+                }
+
+                .depatureDetails,
+                .arrivalDetails {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+
+                    .dateAndTime {
+                        font-weight: bolder;
+                        font-size: 14px;
+
+                        @media (min-width:1280px) {
+                            font-size: 18px;
+
+                        }
+                    }
+                }
+
+                .airportDetails {
+                    display: flex;
+                    font-size: 14px;
+                    justify-content: space-between;
+                    color: #9a9a9a;
+                    gap: 20px;
+                    font-weight: 500;
+
+                    .airportName {
+                        word-break: break-word;
+                        font-size: 10px;
+
+                        @media (min-width:1280px) {
+                            max-width: 155px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .middleSection {
+                    width: 100px;
+                    text-align: center;
+                    align-self: center;
+
+                    @media (min-width:1280px) {
+                        width: 200px;
+
+                    }
+
+
+                    .horizontalLine {
+                        margin: 8px 0;
+                        background-color: #9a9a9a;
+                        border: none;
+                        height: 2px;
+                    }
+                }
+            }
+
+            .fare {
+                font-size: 30px;
+                align-self: center;
+                font-weight: bolder;
+                margin-right: 20px;
+                margin-bottom: 10px;
+
+                @media (min-width:1280px) {
+                    align-self: flex-end;
+
+                }
+
+                .flightFareImage {
+                    text-align: center;
+
+                    @media (min-width:1280px) {
+                        text-align: right;
+
+                    }
+                }
+
+                .taxes {
+                    font-size: 12px;
+                    color: #9a9a9a;
+                    font-weight: lighter;
+                    text-align: center;
+
+                    @media (min-width:1280px) {
+                        text-align: right;
+
+                    }
+                }
+
+                .viewDetails {
+                    font-size: 14px;
+                    color: blue;
+                    font-weight: 300;
+                    margin-top: 10px;
+                    text-decoration: underline;
+                    cursor: pointer;
+                    text-align: center;
+
+                    @media (min-width:1280px) {
+                        text-align: right;
+
+                    }
+                }
+            }
+        }
+
+        .pagination {
+            display: flex;
+            gap: 20px;
+            align-self: flex-end;
+            font-weight: bolder;
+
+            .active {
+                color: #ff6b00;
+                cursor: pointer;
+            }
+
+            .notActive {
+                cursor: pointer;
+            }
+        }
+
+        .stop {
+            color: red
+        }
+
+        .nonStop {
+            color: orange
+        }
+
+        .airLineName {
+            text-align: center;
+        }
+    }
+
+
+}
