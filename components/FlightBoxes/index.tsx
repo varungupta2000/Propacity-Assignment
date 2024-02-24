@@ -67,6 +67,10 @@ const FlightBoxes = () => {
         setModal(true)
     }
 
+    const handleReset = () => {
+        fetchData();
+    }
+
     const indexOfLastItem = currentPage * itemsPerPage;
     // Calculate the index of the first item on the current page
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -86,6 +90,8 @@ const FlightBoxes = () => {
                 <div className={styles.sortingButtons}>
                     <button onClick={() => handleAsSortClick("Asc")} className={styles.button}>Ascending Sort by Price</button>
                     <button onClick={() => handleAsSortClick("Des")} className={styles.button}>Descending Sort by Price</button>
+                    <button onClick={() => handleReset()} className={styles.button}>Reset</button>
+
                 </div>
                 <p className={styles.sortHeading}>FILTER BY AIRLINES:</p>
                 <div className={styles.airlineFilter}>
